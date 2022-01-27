@@ -1,0 +1,51 @@
+﻿<%@ Master Language="VB" CodeFile="Base.master.vb" Inherits="Base" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Yuu Media</title>
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <asp:ContentPlaceHolder id="header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li><asp:HyperLink ID="lnImages" runat="server" NavigateUrl="#">Imágenes</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnVideos" runat="server" NavigateUrl="#">Vídeos</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnMusic" runat="server" NavigateUrl="#">Música</asp:HyperLink></li>
+                    <li><asp:HyperLink ID="lnFiles" runat="server" NavigateUrl="#">Ficheros</asp:HyperLink></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center">
+            <header>
+                <div class="logo">
+                    <asp:ImageButton ID="btnLogo" runat="server" ImageUrl="~/assets/img/logo.png" />
+                </div>
+                <div class="userInfo">
+                    <asp:ImageButton ID="userAvatar" runat="server" ImageUrl="" />
+                    <asp:HyperLink ID="lnUser" runat="server" NavigateUrl="#">Usuario</asp:HyperLink>
+                    <asp:HyperLink ID="lnLogin" runat="server" NavigateUrl="#">Cerrar Sesión</asp:HyperLink>
+                </div>
+            </header>
+            <main>
+                <asp:ContentPlaceHolder id="content" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </main>
+            <footer>
+                <ul>
+                    <li>Copyright © 2022</li>
+                    <li>Proyecto realizado por YoussefAFdez</li>
+                    <li>I.E.S. Oretania</li>
+                </ul>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
