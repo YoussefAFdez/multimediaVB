@@ -25,10 +25,10 @@ Partial Class user_controls_WebUserControl
     End Property
 
     Protected Sub Page_Load(sender As Object, e As System.EventArgs) Handles Me.Load
-        link.NavigateUrl = "~/pages/" & url
+        link.NavigateUrl = url
         link.Text = text
         image.ImageUrl = pathToImg
-        image.PostBackUrl = "~/pages/" & url
+        image.PostBackUrl = url
     End Sub
 
 End Class

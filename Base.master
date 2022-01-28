@@ -6,7 +6,9 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Yuu Media</title>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+        <title>Yuu Media</title>
+    </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="~/assets/css/reset.css" />
     <link rel="stylesheet" href="~/assets/css/style.css" />
     <asp:ContentPlaceHolder id="header" runat="server">
@@ -18,17 +20,18 @@
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><webUtils:imageText ID="lnImages" runat="server" DestinationUrl="images.aspx" ImagePath="~/assets/img/logo.png" TextContent="Imágenes" /></li>
-                        <li><webUtils:imageText ID="lnVideos" runat="server" DestinationUrl="videos.aspx" ImagePath="~/assets/img/logo.png" TextContent="Vídeos" /></li>
-                        <li><webUtils:imageText ID="lnMusic" runat="server" DestinationUrl="music.aspx" ImagePath="~/assets/img/logo.png" TextContent="Música" /></li>
-                        <li><webUtils:imageText ID="lnFiles" runat="server" DestinationUrl="files.aspx" ImagePath="~/assets/img/logo.png" TextContent="Ficheros" /></li>
+                        <li><webUtils:imageText ID="lnImages" runat="server" DestinationUrl="~/pages/images.aspx" ImagePath="~/assets/img/image.jpg" TextContent="Imágenes" /></li>
+                        <li><webUtils:imageText ID="lnVideos" runat="server" DestinationUrl="~/pages/videos.aspx" ImagePath="~/assets/img/video.png" TextContent="Vídeos" /></li>
+                        <li><webUtils:imageText ID="lnMusic" runat="server" DestinationUrl="~/pages/music.aspx" ImagePath="~/assets/img/music.png" TextContent="Música" /></li>
+                        <li><webUtils:imageText ID="lnFiles" runat="server" DestinationUrl="~/pages/files.aspx" ImagePath="~/assets/img/file.png" TextContent="Ficheros" /></li>
                     </ul>
                 </nav>
             </div>
             <div class="center">
                 <header>
                     <div class="logo">
-                        <asp:ImageButton ID="btnLogo" runat="server" ImageUrl="~/assets/img/logo.png" CssClass="img" />
+                        <asp:ImageButton ID="btnLogo" runat="server" ImageUrl="~/assets/img/logo.png" CssClass="img" PostBackUrl="~/Default.aspx" />
+                        <h1>Yuu Media Cloud</h1>
                     </div>
                     <div class="userInfo">
                         <asp:ImageButton ID="userAvatar" runat="server" ImageUrl="~/assets/img/avatar.png" CssClass="avatar" />

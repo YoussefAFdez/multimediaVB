@@ -4,6 +4,10 @@
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
 }
 
+h1 {
+    font-size: 2.5em;
+}
+
 .content {
     display: flex;
 }
@@ -36,6 +40,7 @@ nav li:hover {
 }
 
 nav a {
+    color: white;
     display: block;
 }
 
@@ -48,6 +53,7 @@ header {
 }
 
 .logo {
+    display: flex;
     height: 100%;
 }
 
